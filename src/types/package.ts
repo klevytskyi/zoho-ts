@@ -49,6 +49,7 @@ export type PackageLineItem = {
     track_batch_for_package: false;
     warehouse_id: string;
     warehouse_name: string;
+    serial_numbers: string[];
 };
 
 /**

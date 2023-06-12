@@ -1,3 +1,5 @@
+import { Document } from "./document";
+
 /**
  * Zoho gives us warehouse stock information for an item
  */
@@ -258,6 +260,11 @@ export type Item = {
      */
     image_type: string;
 
+    /**
+     * List of documents attached to the item.
+     */
+    documents: Document;
+
     created_time: string;
 
     last_modified_time: string;
@@ -265,6 +272,16 @@ export type Item = {
     is_returnable: boolean;
 
     warehouses?: WarehouseStock[];
+
+    /**
+     * Item category ID. Defaults to "-1"
+     */
+    category_id: string;
+
+    /**
+     * Item category name. Defaults to "ROOT"
+     */
+    category_name: string;
 };
 
 /**
@@ -335,6 +352,10 @@ export type ListItem = Pick<
     | "tax_percentage"
     | "unit"
     | "status"
+    | "description"
+    | "documents"
+    | "category_id"
+    | "category_name"
 > &
     Partial<Pick<Item, "group_name">> &
     PackageDetails &

@@ -19,3 +19,4 @@ export type { Contact, CreateContact, UpdateContact } from "./contact";
 export type { Item, FullCompositeItem } from "./item";
 export type { Payment, CreatePayment } from "./payment";
 export type { ListBankaccount } from "./bankaccount";
+export type { Category } from "./category";
